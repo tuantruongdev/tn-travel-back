@@ -29,7 +29,9 @@ function getcookie(req) {
 dotenv.config({ path: "./config.env" });
 const app = express();
 
-app.use(cors({ credentials: true, origin: "http://127.0.0.1:5555" }));
+app.use(
+  cors({ credentials: true, origin: "https://tn-travelxd.herokuapp.com" })
+);
 app.use(helmet());
 
 const limiter = rateLimit({
@@ -62,7 +64,7 @@ app.use("/api/v1/tours", tourRoute);
 app.use("/api/v1/locations", locationRoute);
 app.use("/api/v1/users", userRoute);
 app.use("/api/v1/requests", requestRoute);
-app.all("/", function (req, res) {
+app.all("*", function (req, res) {
   res.sendFile(path.join(__dirname, "/index.html"));
 });
 // eslint-disable-next-line no-shadow
