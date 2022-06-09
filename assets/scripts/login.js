@@ -66,7 +66,7 @@ const handleValidate = () => {
       //  const loggedin = await checkloggedIn();
       //console.log(loggedin);
       await localStorage.setItem("userData", JSON.stringify(fetchLogin.data));
-      window.location.href = "http://127.0.0.1:5555/Front-End/index.html";
+      window.location.href = "https://tn-travelxd.herokuapp.com/Front-End/index.html";
     } else {
       console.log(fetchLogin);
       $(".password-message").text(fetchLogin.message);

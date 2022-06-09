@@ -17,7 +17,7 @@ const locationFetch = async () => {
   const code = urlParams.get("id");
   if (!code) {
     window.location.href =
-      "http://127.0.0.1:5555/Front-End/view-tour/QLtour.html";
+      "https://tn-travelxd.herokuapp.com/Front-End/view-tour/QLtour.html";
     return;
   }
   const tour = await getLocation(code);
@@ -110,7 +110,7 @@ const editLocation = async () => {
     "Sửa địa điểm thành công! Về danh sách địa điểm sau 3 giây...";
   await new Promise((r) => setTimeout(r, 3000));
   window.location.href =
-    "http://127.0.0.1:5555/Front-End/view-dia-danh/QLdiadanh.html";
+    "https://tn-travelxd.herokuapp.com/Front-End/view-dia-danh/QLdiadanh.html";
   //console.log(_updateTour);
 };
 const updateLocation = async (obj, id) => {

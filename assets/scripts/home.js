@@ -94,11 +94,11 @@ const showTour = (data) => {
     tempTour = tempTour.replace("{@tourname@}", tour.name);
     tempTour = tempTour.replace(
       "{@tourUrl@}",
-      `http://127.0.0.1:5555/Front-End/tour.html?id=${tour._id}`
+      `https://tn-travelxd.herokuapp.com/Front-End/tour.html?id=${tour._id}`
     );
     tempTour = tempTour.replace(
       "{@tourUrl@}",
-      `http://127.0.0.1:5555/Front-End/tour.html?id=${tour._id}`
+      `https://tn-travelxd.herokuapp.com/Front-End/tour.html?id=${tour._id}`
     );
     tempTour = tempTour.replace("{@duration@}", tour.duration + " ngày");
     const ovsplit = tour.overView.split("|");
@@ -234,9 +234,9 @@ const bindHeader = async () => {
   if (userinfo.role != "admin") {
     headermenu[0].setAttribute("hidden", "");
   }
-  headermenu[0].href = "http://127.0.0.1:5555/Front-End/view-tour/QLtour.html";
-  headermenu[1].href = "http://127.0.0.1:5555/Front-End/account-page.html";
-  headermenu[2].href = "http://127.0.0.1:5555/Front-End/change_password.html";
+  headermenu[0].href = "https://tn-travelxd.herokuapp.com/Front-End/view-tour/QLtour.html";
+  headermenu[1].href = "https://tn-travelxd.herokuapp.com/Front-End/account-page.html";
+  headermenu[2].href = "https://tn-travelxd.herokuapp.com/Front-End/change_password.html";
   headermenu[3].onclick = () => {
     document.cookie.split(";").forEach(function (c) {
       document.cookie = c
@@ -258,12 +258,12 @@ const bindHeader = async () => {
   getLocations();
   bind();
   document.getElementsByClassName("username")[0].onclick = () => {
-    window.location.href = "http://127.0.0.1:5555/Front-End/account-page.html";
+    window.location.href = "https://tn-travelxd.herokuapp.com/Front-End/account-page.html";
   };
   document.getElementsByClassName("username")[0].onclick = () => {
-    window.location.href = "http://127.0.0.1:5555/Front-End/account-page.html";
+    window.location.href = "https://tn-travelxd.herokuapp.com/Front-End/account-page.html";
   };
   document.getElementsByClassName("header-logo")[0].href =
-    "http://127.0.0.1:5555/Front-End";
+    "https://tn-travelxd.herokuapp.com/Front-End";
   bindHeader();
 })();

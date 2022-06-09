@@ -102,7 +102,7 @@ const showUsers = async () => {
     tempTour = tempTour.replace("{@email@}", tour.email);
     tempTour = tempTour.replace(
       "{@edit@}",
-      "http://127.0.0.1:5555/Front-End/view-tai-khoan/xem-chi-tiet-TK.html?id=" +
+      "https://tn-travelxd.herokuapp.com/Front-End/view-tai-khoan/xem-chi-tiet-TK.html?id=" +
         tour._id
     );
     tempTour = tempTour.replace(

@@ -55,9 +55,9 @@ const bindHeader = async () => {
   if (userinfo.role != "admin") {
     headermenu[0].setAttribute("hidden", "");
   }
-  headermenu[0].href = "http://127.0.0.1:5555/Front-End/view-tour/QLtour.html";
-  headermenu[1].href = "http://127.0.0.1:5555/Front-End/account-page.html";
-  headermenu[2].href = "http://127.0.0.1:5555/Front-End/change_password.html";
+  headermenu[0].href = "https://tn-travelxd.herokuapp.com/Front-End/view-tour/QLtour.html";
+  headermenu[1].href = "https://tn-travelxd.herokuapp.com/Front-End/account-page.html";
+  headermenu[2].href = "https://tn-travelxd.herokuapp.com/Front-End/change_password.html";
   headermenu[3].onclick = () => {
     document.cookie.split(";").forEach(function (c) {
       document.cookie = c
@@ -84,7 +84,7 @@ const checklogin = async () => {
     // );
     // fullname.innerHTML = "Nguyen Tuan Truong";
   } else {
-    window.location.href = "http://127.0.0.1:5555/Front-End/login.html";
+    window.location.href = "https://tn-travelxd.herokuapp.com/Front-End/login.html";
   }
 };
 const fetchChangePass = async (obj) => {
@@ -125,9 +125,9 @@ $(() => {
   validateForm();
   checklogin();
   document.getElementsByClassName("username")[0].onclick = () => {
-    window.location.href = "http://127.0.0.1:5555/Front-End/account-page.html";
+    window.location.href = "https://tn-travelxd.herokuapp.com/Front-End/account-page.html";
   };
   document.getElementsByClassName("header-logo")[0].href =
-    "http://127.0.0.1:5555/Front-End";
+    "https://tn-travelxd.herokuapp.com/Front-End";
   bindHeader();
 });
