@@ -30,8 +30,8 @@ const app = express();
 // app.use(
 //   cors({ credentials: true, origin: "https://tn-travelxd.herokuapp.com" })
 // );
-app.use(helmet());
-
+app.use(helmet({contentScurityPolicy:false}));
+//disable csp for outside script DANGEROUS
 const limiter = rateLimit({
   max: 10000,
   windowMs: 60 * 60 * 1000,
@@ -57,6 +57,7 @@ app.use("*", (req, res, next) => {
   // console.log(cookie);
   next();
 });
+/*
 app.use(function (req, res, next) {
   res.setHeader(
     "Content-Security-Policy-Report-Only",
@@ -64,6 +65,7 @@ app.use(function (req, res, next) {
   );
   next();
 });
+*/
 app.use(hpp({ whitelist: ["duration"] }));
 app.use("/api/v1/tours", tourRoute);
 app.use("/api/v1/locations", locationRoute);
