@@ -27,9 +27,9 @@ function getcookie(req) {
 dotenv.config({ path: "./config.env" });
 const app = express();
 
-// app.use(
-//   cors({ credentials: true, origin: "https://tn-travelxd.herokuapp.com" })
-// );
+ app.use(
+   cors({ credentials: true, origin: "https://tn-travelxd.herokuapp.com" })
+ );
 
 //app.use(helmet({contentSecurityPolicy:false}));
 //disable csp for outside script DANGEROUS
