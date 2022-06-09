@@ -35,9 +35,9 @@ app.use(function (req, res, next) {
   next();
 });
 
-app.use(
-  cors({ credentials: true, origin: "https://tn-travelxd.herokuapp.com" })
-);
+// app.use(
+//   cors({ credentials: true, origin: "https://tn-travelxd.herokuapp.com" })
+// );
 app.use(helmet());
 
 const limiter = rateLimit({
