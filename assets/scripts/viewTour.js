@@ -7,7 +7,7 @@ const fetchTour = async (tourId) => {
   if (fetchTour.status !== "success") {
     console.log("get tour failed");
     alert("tour không tồn tại");
-    window.location.href = "https://tn-travelxd.herokuapp.com/Front-End/index.html";
+    window.location.href = "https://tn-travelxd.herokuapp.com/index.html";
     return;
   }
   return fetchTour;
@@ -21,7 +21,7 @@ const checkoutTour = async (tourId) => {
   if (fetchTour.status !== "success") {
     console.log("checkout tour failed");
     alert("checkout tour failed");
-    //   window.location.href = "https://tn-travelxd.herokuapp.com/Front-End/index.html";
+    //   window.location.href = "https://tn-travelxd.herokuapp.com/index.html";
     return;
   }
   return fetchTour;
@@ -35,7 +35,7 @@ const getOneTour = async () => {
   const urlParams = new URLSearchParams(queryString);
   const code = urlParams.get("id");
   if (!code) {
-    window.location.href = "https://tn-travelxd.herokuapp.com/Front-End/index.html";
+    window.location.href = "https://tn-travelxd.herokuapp.com/index.html";
     return;
   }
   const tour = await fetchTour(code);
@@ -143,7 +143,7 @@ const handleCheckout = async () => {
     const urlParams = new URLSearchParams(queryString);
     const code = urlParams.get("id");
     if (!code) {
-      window.location.href = "https://tn-travelxd.herokuapp.com/Front-End/index.html";
+      window.location.href = "https://tn-travelxd.herokuapp.com/index.html";
       return;
     }
     const checkout = await checkoutTour(code);
@@ -174,9 +174,10 @@ const bindHeader = async () => {
   if (userinfo.role != "admin") {
     headermenu[0].setAttribute("hidden", "");
   }
-  headermenu[0].href = "https://tn-travelxd.herokuapp.com/Front-End/view-tour/QLtour.html";
-  headermenu[1].href = "https://tn-travelxd.herokuapp.com/Front-End/account-page.html";
-  headermenu[2].href = "https://tn-travelxd.herokuapp.com/Front-End/change_password.html";
+  headermenu[0].href =
+    "https://tn-travelxd.herokuapp.com/view-tour/QLtour.html";
+  headermenu[1].href = "https://tn-travelxd.herokuapp.com/account-page.html";
+  headermenu[2].href = "https://tn-travelxd.herokuapp.com/change_password.html";
   headermenu[3].onclick = () => {
     document.cookie.split(";").forEach(function (c) {
       document.cookie = c
@@ -193,10 +194,11 @@ const bindHeader = async () => {
   checklogin();
 
   document.getElementsByClassName("username")[0].onclick = () => {
-    window.location.href = "https://tn-travelxd.herokuapp.com/Front-End/account-page.html";
+    window.location.href =
+      "https://tn-travelxd.herokuapp.com/account-page.html";
   };
   document.getElementsByClassName("header-logo")[0].href =
-    "https://tn-travelxd.herokuapp.com/Front-End";
+    "https://tn-travelxd.herokuapp.com";
   bindHeader();
   handleCheckout();
 })();

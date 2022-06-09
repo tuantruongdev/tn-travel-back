@@ -37,7 +37,7 @@ const checklogin = async () => {
     // );
     // fullname.innerHTML = "Nguyen Tuan Truong";
   } else {
-    window.location.href = "https://tn-travelxd.herokuapp.com/Front-End/login.html";
+    window.location.href = "https://tn-travelxd.herokuapp.com/login.html";
   }
 };
 const handleLogout = () => {
@@ -96,7 +96,7 @@ const submitEdit = async () => {
         alert("thay đổi thông tin người dùng thành công!");
         localStorage.setItem("userData", JSON.stringify(account.data.user));
         window.location.href =
-          "https://tn-travelxd.herokuapp.com/Front-End/account-page.html";
+          "https://tn-travelxd.herokuapp.com/account-page.html";
       }
     });
 };
@@ -126,9 +126,10 @@ const bindHeader = async () => {
   if (userinfo.role != "admin") {
     headermenu[0].setAttribute("hidden", "");
   }
-  headermenu[0].href = "https://tn-travelxd.herokuapp.com/Front-End/view-tour/QLtour.html";
-  headermenu[1].href = "https://tn-travelxd.herokuapp.com/Front-End/account-page.html";
-  headermenu[2].href = "https://tn-travelxd.herokuapp.com/Front-End/change_password.html";
+  headermenu[0].href =
+    "https://tn-travelxd.herokuapp.com/view-tour/QLtour.html";
+  headermenu[1].href = "https://tn-travelxd.herokuapp.com/account-page.html";
+  headermenu[2].href = "https://tn-travelxd.herokuapp.com/change_password.html";
   headermenu[3].onclick = () => {
     document.cookie.split(";").forEach(function (c) {
       document.cookie = c
@@ -145,13 +146,14 @@ $(async () => {
   checklogin();
   showAccount(await getAccountsinfo());
   document.getElementsByClassName("username")[0].onclick = () => {
-    window.location.href = "https://tn-travelxd.herokuapp.com/Front-End/account-page.html";
+    window.location.href =
+      "https://tn-travelxd.herokuapp.com/account-page.html";
   };
   //document.getElementsByName("password")[0].setAttribute("hidden", "");
   // an? password.
   // document.getElementsByClassName("mb-3")[4].setAttribute("hidden", "");
   submitEdit();
   document.getElementsByClassName("header-logo")[0].href =
-    "https://tn-travelxd.herokuapp.com/Front-End";
+    "https://tn-travelxd.herokuapp.com";
   bindHeader();
 });

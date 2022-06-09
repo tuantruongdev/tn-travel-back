@@ -59,7 +59,7 @@ const handleSignUp = async () => {
           "userData",
           JSON.stringify(fetchsignUp.data)
         );
-        window.location.href = "https://tn-travelxd.herokuapp.com/Front-End/index.html";
+        window.location.href = "https://tn-travelxd.herokuapp.com/index.html";
       } else {
         console.log(fetchsignUp);
         //   $(".password-message").text(fetchsignUp.message);

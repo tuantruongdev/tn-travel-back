@@ -76,7 +76,7 @@ const addLocation = async () => {
     "Thêm địa điểm thành công! Về danh sách địa điểm sau 3 giây...";
   await new Promise((r) => setTimeout(r, 3000));
   window.location.href =
-    "https://tn-travelxd.herokuapp.com/Front-End/view-dia-danh/QLdiadanh.html";
+    "https://tn-travelxd.herokuapp.com/view-dia-danh/QLdiadanh.html";
 };
 (() => {
   document.getElementById("btnXacNhan").onclick = addLocation;

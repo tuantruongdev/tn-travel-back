@@ -29,6 +29,26 @@ function getcookie(req) {
 dotenv.config({ path: "./config.env" });
 const app = express();
 
+app.use(function (req, res, next) {
+  res.setHeader(
+    "Content-Security-Policy",
+    `default-src 'self';
+    script-src 'report-sample' 'self' https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js https://code.jquery.com/jquery-3.6.0.js https://kit.fontawesome.com/3fc531ce88.js https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js wasm-eval;
+    style-src 'report-sample' 'self' https://cdn.datatables.net https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://fonts.googleapis.com https://maxcdn.bootstrapcdn.com https://stackpath.bootstrapcdn.com;
+    object-src 'none';
+    base-uri 'self';
+    connect-src 'self' https://ka-f.fontawesome.com;
+    font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com https://ka-f.fontawesome.com https://maxcdn.bootstrapcdn.com;
+    frame-src 'self';
+    img-src * data:;
+    manifest-src 'self';
+    media-src 'self';
+    report-uri https://62a23e815a9e55900da76cca.endpoint.csper.io/?v=0;
+    worker-src 'none';`
+  );
+  next();
+});
+
 app.use(
   cors({ credentials: true, origin: "https://tn-travelxd.herokuapp.com" })
 );

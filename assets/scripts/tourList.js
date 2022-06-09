@@ -69,13 +69,13 @@ const showTours = async (tours) => {
     tempTour = tempTour.replace("{@allowed@}", tour.accepted);
     tempTour = tempTour.replace(
       "{@approval@}",
-      "https://tn-travelxd.herokuapp.com/Front-End/view-don-hang/QLdonhang.html?id=" +
+      "https://tn-travelxd.herokuapp.com/view-don-hang/QLdonhang.html?id=" +
         tour._id
     );
     tempTour = tempTour.replace("{@status@}", tour.status);
     tempTour = tempTour.replace(
       "{@edit@}",
-      "https://tn-travelxd.herokuapp.com/Front-End/view-tour/sua-tour.html?id=" + tour._id
+      "https://tn-travelxd.herokuapp.com/view-tour/sua-tour.html?id=" + tour._id
     );
     tempTour = tempTour.replace(
       "{@startAt@}",

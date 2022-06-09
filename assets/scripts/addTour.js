@@ -77,7 +77,7 @@ const addTour = async () => {
     "Sửa tour thành công! Về danh sách tour sau 3 giây...";
   await new Promise((r) => setTimeout(r, 3000));
   window.location.href =
-    "https://tn-travelxd.herokuapp.com/Front-End/view-tour/QLtour.html";
+    "https://tn-travelxd.herokuapp.com/view-tour/QLtour.html";
 };
 
 (() => {

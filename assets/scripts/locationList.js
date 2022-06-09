@@ -75,7 +75,7 @@ const showLocations = async (tours) => {
     tempTour = tempTour.replace("{@overView@}", tour.overView.slice(0, 60));
     tempTour = tempTour.replace(
       "{@edit@}",
-      "https://tn-travelxd.herokuapp.com/Front-End/view-dia-danh/sua-dia-danh.html?id=" +
+      "https://tn-travelxd.herokuapp.com/view-dia-danh/sua-dia-danh.html?id=" +
         tour._id
     );
     tempTour = tempTour.replace(

@@ -120,7 +120,7 @@ const getRequests = async () => {
   const code = urlParams.get("id");
   if (!code) {
     window.location.href =
-      "https://tn-travelxd.herokuapp.com/Front-End/view-tour/QLtour.html";
+      "https://tn-travelxd.herokuapp.com/view-tour/QLtour.html";
     return;
   }
   const requests = await fetchRequests(code);

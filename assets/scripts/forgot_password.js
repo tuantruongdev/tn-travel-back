@@ -75,7 +75,7 @@ const resetPassword = (code) => {
       document.getElementsByClassName("mb-4 form-text")[0].innerHTML =
         "Thay đổi mật khẩu thành công. Bạn sẽ được chuyển hướng về trang đăng nhập sau 5 giây";
       await new Promise((r) => setTimeout(r, 5000));
-      window.location.href = "https://tn-travelxd.herokuapp.com/Front-End/login.html";
+      window.location.href = "https://tn-travelxd.herokuapp.com/login.html";
     });
 };
 const checkParameter = () => {
