@@ -132,7 +132,7 @@ exports.forgotPassword = catchAsync(async (req, res, next) => {
   const resetUrl = `${req.protocol}://${req.get(
     "host"
   )}/api/v1/users/resetPassword/${resetToken}`;
-  const newResetURl = `http://127.0.0.1:5555/Front-End/forgot_password.html?code=${resetToken}`;
+  const newResetURl = `https://tn-travelxd.herokuapp.com/forgot_password.html?code=${resetToken}`;
   const message = `forgot password? click this link: ${newResetURl}\n , and enter your password, if you not requesting this, please ignore this email!`;
   try {
     await sendEmail({
