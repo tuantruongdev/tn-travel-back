@@ -17,7 +17,7 @@ const createSendToken = (user, statusCode, res) => {
       Date.now() + process.env.JWT_EXPRIE_COOKIE * 24 * 60 * 60 * 1000
     ),
     //set true to use https
-    secure: false,
+    secure: true,
     httpOnly: false,
   };
 
