@@ -74,7 +74,7 @@ app.use("/api/v1/locations", locationRoute);
 app.use("/api/v1/users", userRoute);
 app.use("/api/v1/requests", requestRoute);
 app.all("*", function (req, res) {
-  res.sendFile(path.join(__dirname, req.originalUrl));
+  res.sendFile(path.join(__dirname, req.originalUrl.split("?")[0]));
 });
 
 // eslint-disable-next-line no-shadow
