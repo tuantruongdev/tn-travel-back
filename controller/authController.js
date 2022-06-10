@@ -65,14 +65,14 @@ exports.protect = catchAsync(async (req, res, next) => {
   //get token
   let token;
   if (!req.jwt) {
-    return next(new AppError("you're not logged in!"), 401);
+    return next(new AppError("no jwt you're not logged in!"), 401);
   }
   //console.log(req.jwt[0]);
   if (req.jwt[0]) {
     token = req.jwt[0].split("=")[1];
   }
   if (!token) {
-    return next(new AppError("you're not logged in!"), 401);
+    return next(new AppError("no token you're not logged in!"), 401);
   }
   //verify token
   // console.log(token);
