@@ -20,16 +20,17 @@ const globalErrHandler = require("./controller/errorController");
 // eslint-disable-next-line no-shadow
 function getcookie(req) {
   if (req.headers.cookie) {
-    const { cookie } = req.headers; //console.log(cookie); return cookie.split("; ");
+    const { cookie } = req.headers; //console.log(cookie);
+    return cookie.split("; ");
   }
 }
 
 dotenv.config({ path: "./config.env" });
 const app = express();
 
- app.use(
-   cors({ credentials: true, origin: "https://tn-travelxd.herokuapp.com" })
- );
+app.use(
+  cors({ credentials: true, origin: "https://tn-travelxd.herokuapp.com" })
+);
 
 //app.use(helmet({contentSecurityPolicy:false}));
 //disable csp for outside script DANGEROUS
